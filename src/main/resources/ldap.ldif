@@ -1,0 +1,51 @@
+dn: dc=pranavshukla,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: pranavshukla
+o: PranavShukla
+
+dn: ou=people,dc=pranavshukla,dc=com
+objectclass: top
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=pranavshukla,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=pshukla,ou=people,dc=pranavshukla,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Pranav Shukla
+sn: Shukla
+givenName: Pranav
+mail: pshukla@pranavshukla.com
+uid: pshukla
+userPassword: {SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g=
+
+dn: uid=pratik,ou=people,dc=pranavshukla,dc=com
+objectClass: inetOrgPerson
+cn: Pratik Shukla
+sn: Shukla
+givenName: John
+mail: pratik@pranavshukla.com
+uid: pratik
+userPassword: {SHA}iEPX+SQWIR3p67lj/0zigSWTKHg=
+
+dn: cn=admin,ou=groups,dc=pranavshukla,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: admins
+uniqueMember: uid=pshukla,ou=people,dc=pranavshukla,dc=com
+
+dn: cn=user,ou=groups,dc=pranavshukla,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: users
+uniqueMember: uid=pshukla,ou=people,dc=pranavshukla,dc=com
+uniqueMember: uid=pratik,ou=people,dc=pranavshukla,dc=com
+
